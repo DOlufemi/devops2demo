@@ -2,7 +2,7 @@ node {
 	def node_app
         
 	stage('Build Docker image') {
-		node_app = docker.build("nodeexpress", '.')
+		node_app = docker.build("adaniilidis/nodeexpress", '.')
 	}
 
 	stage('Push') {
