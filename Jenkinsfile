@@ -6,7 +6,7 @@ node {
 	}
 
 	stage('Push') {
-		docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
+		docker.withRegistry('https://registry.hub.docker.com', 'dolufemi'){
 		node_app.push("${env.BUILD_NUMBER}")
 		node_app.push("latest")
 		}
